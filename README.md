@@ -34,5 +34,22 @@ The decoded commands control an LED array driven by an **SN74HC595 Shift Registe
 2.  Verify `F_CPU` in `config.h` matches your clock speed (default: 16MHz).
 3.  Compile and upload using AVRDUDE or your preferred ISP programmer.
 
+## Pin Configuration (Wiring)
+
+### Control Logic (Microcontroller <-> Shift Register)
+| Component | Pin Name | Wire Color | ATmega328P Pin | Arduino Pin |
+| :--- | :--- | :--- | :--- | :--- |
+| **IR Receiver** | Data | Green | PD2 (INT0) | D2 |
+| **74HC595** | SER (Data) | Yellow | PD7 | D7 |
+| **74HC595** | OE (Enable) | Yellow | PD6 | D6 |
+| **74HC595** | SRCLR (Clear)| Yellow | PD5 | D5 |
+| **74HC595** | SRCLK (Clock)| Yellow | PD4 | D4 |
+| **74HC595** | RCLK (Latch) | Yellow | PD3 | D3 |
+
+### LED Output (Shift Register <-> LEDs)
+The output pins of the SN74HC595 are connected to the LEDs using **Yellow** wires.
+* **QA - QH (Pins 15, 1-7):** Connected to LED anodes via 220Ω resistors.
+* **GND:** All LED cathodes connected to Ground via **Black** wires.
+
 ## License
 MIT License.
