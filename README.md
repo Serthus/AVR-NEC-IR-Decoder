@@ -51,3 +51,6 @@ The output pins of the SN74HC595 are connected to the LEDs using **Yellow** wire
 
 ## License
 MIT License.
+
+## Demonstration
+[Click here to watch the demo video](https://drive.google.com/file/d/1MNjj675nPt3z14_ZOLCQIJbhEBLIrauC/view)
