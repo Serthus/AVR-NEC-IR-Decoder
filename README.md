@@ -11,7 +11,7 @@ The decoded commands control an LED array driven by an **SN74HC595 Shift Registe
 * **Timing:** Timer0 used for pulse width measurement (State Machine approach).
 * **LED Control:** Timer1 used for non-blocking LED sequencing and animation.
 * **Driver:** Custom driver for 74HC595 Serial-to-Parallel Shift Register.
-
+* 
 ## Hardware Requirements
 * **Microcontroller:** ATmega328P (e.g., Arduino Uno board).
 * **IR Receiver:** VS1838B or compatible (38kHz).
