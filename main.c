@@ -1,8 +1,8 @@
 /**
- * Project:     NEC IR Decoder with SN74HC595 Shift Register LED Control (Bare Metal)
+ * Project:         NEC IR Decoder with SN74HC595 Shift Register LED Control (Bare Metal)
  * Microcontroller: ATmega328P / Arduino Uno (16 MHz)
- * Author:      Kamil Kupis
- * Date:        2025-12-18
+ * Author:          Kamil Kupis
+ * Date:            2025-12-18
  * Description: 
  * Main application entry point. Initializes the IR receiver subsystem
  * and handles processing of received data in the main loop.
@@ -34,7 +34,6 @@ int main(void)
     /* Enable global interrupts to start processing */
     sei();       
     
-    /* Main Event Loop */
     while(1)
     {
         if(data_ready)
@@ -64,7 +63,6 @@ int main(void)
                     break;
                     
                 default:
-                    // Optional: Handle unknown keys
                     break;
             }
         }
