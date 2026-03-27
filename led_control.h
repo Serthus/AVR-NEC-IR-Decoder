@@ -12,13 +12,13 @@
 void led_init(void);
 
 /* Low-level control */
-void led_set_pattern(uint8_t data); // Previously 'print_diod'
-void led_all_on(void);              // Previously 'diod_on'
-void led_all_off(void);             // Previously 'diod_off'
+void led_set_pattern(uint8_t data);
+void led_all_on(void);
+void led_all_off(void);
 
 /* Animation sequences */
 void led_binary_counting(void);
-void led_sequence_left(void);       // Previously 'left_side'
-void led_sequence_right(void);      // Previously 'right_side'
+void led_sequence_left(void);'
+void led_sequence_right(void);
 
 #endif /* LED_CONTROL_H_ */
