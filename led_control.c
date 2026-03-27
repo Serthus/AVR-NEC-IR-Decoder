@@ -54,7 +54,6 @@ static uint8_t check_wait(uint8_t time_ms)
         {
             return 1; // Break loop if new command arrived
         }
-        
         // Reset timer and wait for 1ms flag
         TCNT1 = 0;
         TIFR1 |= (1 << OCF1A); // Clear flag by writing 1
@@ -67,7 +66,6 @@ void led_set_pattern(uint8_t data)
 {
     for(int i = 0; i <= 7; i++)
     {
-        // Set Data Pin
         if(data & (1 << i))
         {
             PORTD |= (1 << SER);
@@ -90,7 +88,7 @@ void led_set_pattern(uint8_t data)
 void led_all_on(void)
 {
     PORTD &= ~(1 << OE); // Enable Output
-    led_set_pattern(0);  // Note: Depending on wiring, 0 might mean ON or OFF. Assuming logic matches HW.
+    led_set_pattern(0);
 }
 
 void led_all_off(void)
@@ -98,7 +96,6 @@ void led_all_off(void)
     led_set_pattern(0);
     PORTD |= (1 << OE);  // Disable Output
 }
-
 void led_binary_counting(void)
 {
     for(int i = 0; i < 255; i++)
